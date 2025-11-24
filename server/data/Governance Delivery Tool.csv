@@ -1,0 +1,23 @@
+﻿"Activity ","Asset","Workstream","Department ","Start Date","Deadline","Project Lead(s)","Team Members","Priority ","Notes ","Progress %","Status Update","Key External Contacts","Risk","Completed"
+"Appointments test","[""RFL""]","[""Appointments""]","[""DESNZ""]","15/10/2025",,,,,,,,,,"False"
+"NWF Articles of Association ","[""NWF""]","[""Governance Foundations""]","[""HMT""]","26/10/2025","10/06/2026","Carlsson, Robert - UKGI","Herz, Amira - UKGI;Lau, Chun - UKGI","Low","Reflecting any changes from Policy/Strategy workstreams ","20",,,"Green ↑","False"
+"NWF Chair's Letter","[""NWF""]","[""Governance Foundations""]","[""HMT""]","01/12/2025","02/03/2026","Lau, Chun - UKGI","Carlsson, Robert - UKGI;Glass, James - UKGI","High","To issue Chair's letter","40","update 21.10  - test: First draft with HMT",,"Green -","False"
+"NWF Framework Document Refresh ","[""NWF""]","[""Governance Foundations""]","[""HMT""]","04/12/2025","02/03/2026","Herz, Amira - UKGI","Finn, Yaacov - UKGI;Glass, James - UKGI","Medium","Refresh of FWD ","20",,,"Amber-Green ↑","False"
+"NWF New NEDs x2","[""NWF""]","[""Appointments"",""Governance Foundations""]","[""HMT""]","02/02/2026","02/06/2026","Herz, Amira - UKGI","Lau, Chun - UKGI","Low","Agree forward route with HMT","10","Completed assessment of required skill set",,"Green -","False"
+"NWF Portfolio Review","[""NWF""]","[""Internal""]","[""HMT""]","21/10/2025","21/10/2025","Lau, Chun - UKGI","Finn, Yaacov - UKGI","High","Slides sent to panel","90",,,"Red -","True"
+"RFL Chair's Letter","[""RFL""]","[""Governance Foundations""]","[""HMT""]","01/02/2026","01/04/2026","Lau, Chun - UKGI","Finn, Yaacov - UKGI","Low","Chair's letter - signed off in April (recurring)","0",,"chairletter@rfl.org.uk
+","Red -","False"
+"RFL Framework Document ","[""RFL""]","[""Governance Foundations""]","[""HMT"",""DCMS""]","01/10/2024","01/09/2025","Herz, Amira - UKGI","Glass, James - UKGI;Finn, Yaacov - UKGI","Low","New FWD agreed - Sept 2025","100",,,"Green ↑","False"
+"RFL Remuneration Framework","[""RFL""]","[""Remuneration""]","[""HMT""]","01/05/2025","01/09/2025","Glass, James - UKGI","Herz, Amira - UKGI;Lau, Chun - UKGI","Low","Board Remuneration Framework - agreed by CST","100",,,"Green ↑","True"
+"UKEF Audit Chair Appt ","[""UKEF""]","[""Appointments"",""Board Quality""]","[""DBT""]","01/01/2026","04/05/2026","Herz, Amira - UKGI","Finn, Yaacov - UKGI;Glass, James - UKGI","Low","To progress stage 2","0","latest is  xy z",,"Amber-Green -","False"
+"UKEF Board Effectiveness Review ","[""UKEF""]","[""Culture"",""Board Quality"",""Governance Foundations""]","[""DBT""]","01/01/2026","01/04/2026","Herz, Amira - UKGI","Lau, Chun - UKGI","Medium","Book in slots","0",,,"Red -","False"
+"UKEF Chair Letter ","[""UKEF""]","[""Governance Foundations""]","[""DBT""]","21/12/2025","02/03/2026","Carlsson, Robert - UKGI","Glass, James - UKGI","Medium","Annual Chair letter ","0",,,"Red-Amber -","False"
+"UKEF Elect SID ","[""UKEF""]","[""Board Quality"",""Appointments""]","[""DBT""]","01/12/2025","02/03/2026","Carlsson, Robert - UKGI","Herz, Amira - UKGI;Lau, Chun - UKGI;Glass, James - UKGI","Low","- Gather Longlist","0",,,"Amber ↑","True"
+"UKEF NED appointment (Audit Chair)","[""UKEF""]","[""Appointments"",""Board Quality""]","[""UKEF""]","04/12/2025","29/04/2026","Finn, Yaacov - UKGI","Herz, Amira - UKGI","Low","This is not OCPA regulated: 
+This is no.10 interest
+Update 16.10 - This is a test
+update 30.10 - this is an update 
+","100",,,"Red-Amber ↑","True"
+"UKEF Portfolio Review","[""UKEF""]","[""Internal"",""Governance Foundations""]","[""DBT""]","01/10/2025","21/10/2025","Herz, Amira - UKGI","Lau, Chun - UKGI;Carlsson, Robert - UKGI","High","Papers sent to portfolio team 
+link - https://tris42.sharepoint.com/sites/ukgi_is_prjctsupport/Portfolio%20Management/Forms/All.aspx?id=%2Fsites%2Fukgi%5Fis%5Fprjctsupport%2FPortfolio%20Management%2F4%20Meeting%20Documentation%2FAsset%20and%20Team%20Strategy%2FUKEF&viewid=1d090550%2De57f%2D4662%2Dbde5%2D0ebd4078c7bc","100",,"mrsukef@ukef.gov.uk","Red-Amber ↑","True"
+"UKEF Risk Register","[""UKEF""]","[""Risk"",""Internal""]","[""DBT""]","06/10/2025","05/11/2025","Lau, Chun - UKGI","Finn, Yaacov - UKGI","Medium",,"10",,,"Amber ↓","False"

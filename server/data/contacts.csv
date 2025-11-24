@@ -1,0 +1,4 @@
+email,role,permitted_depts,permitted_sources
+admin@gov.uk,Admin,ALL,ALL
+lead@gov.uk,Editor,Finance;HR,FINTAG
+viewer@gov.uk,Viewer,ALL,ALL

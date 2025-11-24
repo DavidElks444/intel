@@ -1,0 +1,30 @@
+# /intel/pyproject.toml
+
+[project]
+name = "intel-platform"
+version = "0.1.0"
+requires-python = ">=3.10" 
+
+dependencies = [
+    # --- Dependencies for BOTH services ---
+    "fastapi",
+    "uvicorn[standard]",
+    "pydantic[email]",
+    "pandas",
+    # --- Dependencies for service_request_api ---
+    "pydantic-settings",
+    "python-dotenv",
+    "requests",
+    "httpx",
+    "python-multipart",
+    "aiosmtplib",
+    "httpx",
+    "multi-rake",
+    "openpyxl>=3.1.5",
+    "altair>=5.5.0",
+    "numpy<2",
+    "openpyxl",
+    "plotly",
+    "ipykernel",
+    "altair"
+]

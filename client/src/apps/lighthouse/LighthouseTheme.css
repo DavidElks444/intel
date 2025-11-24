@@ -1,0 +1,267 @@
+/* client/src/apps/lighthouse/LighthouseTheme.css */
+
+:root {
+  /* --- PALETTE: The "Pastelised" Brand --- */
+  /* Primary Red (Base): #9A2A2A */
+  
+  /* 1. The "Clay" Surface (Backgrounds) - A very pale, warm tint of the red */
+  --brand-surface: #FDF6F6; 
+  
+  /* 2. The "Soft Brick" (Secondary UI elements) - Pastelised but visible */
+  --brand-soft: #E8Caca;
+  
+  /* 3. The "Deep Maroon" (Text/Headers) - High contrast, accessible */
+  --brand-deep: #5D1A1A; 
+  
+  /* 4. The "Action Red" (Buttons/Highlights) - The original brand color */
+  --brand-primary: #9A2A2A;
+
+  /* --- NEUTRALS (Data Viz Basics) --- */
+  --text-main: #2C3E50;
+  --text-light: #586575;
+  --bg-app: #F4F7F9;
+  --glass-border: rgba(255, 255, 255, 0.6);
+
+  /* --- SHADOWS (The "3D" Feel) --- */
+  /* Level 1: Flat card */
+  --shadow-1: 0 2px 4px rgba(0,0,0,0.05);
+  /* Level 2: Floating */
+  --shadow-2: 0 8px 20px rgba(154, 42, 42, 0.08); 
+  /* Level 3: Lifted (Hover) */
+  --shadow-3: 0 15px 35px rgba(154, 42, 42, 0.15);
+}
+
+/* --- UTILITIES --- */
+.lh-container {
+  background-color: var(--bg-app);
+  min-height: 100vh;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  color: var(--text-main);
+  padding: 2rem;
+}
+
+/* The "Glass" Card - 3D without Chartjunk */
+.lh-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px); /* The frosted glass effect */
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: var(--shadow-1);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Bouncy transition */
+  position: relative;
+  overflow: hidden;
+}
+
+/* The 3D Lift Effect */
+.lh-card:hover {
+  transform: translateY(-5px) scale(1.01);
+  box-shadow: var(--shadow-3);
+  border-color: var(--brand-soft);
+}
+
+/* Typography (Stephen Few style - clear hierarchy) */
+.lh-h1 { font-size: 2rem; font-weight: 700; color: var(--brand-deep); margin-bottom: 0.5rem; letter-spacing: -0.5px; }
+.lh-h2 { font-size: 1.25rem; font-weight: 600; color: var(--text-main); margin-bottom: 1rem; }
+.lh-label { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; color: var(--text-light); font-weight: 600; }
+.lh-metric { font-size: 2.5rem; font-weight: 800; color: var(--brand-primary); }
+
+/* Data Table (Tufte Style - No vertical lines) */
+.lh-table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
+.lh-table th { text-align: left; padding: 12px 8px; border-bottom: 2px solid var(--text-main); color: var(--brand-deep); font-size: 0.9rem; }
+.lh-table td { padding: 12px 8px; border-bottom: 1px solid #eee; color: var(--text-main); font-size: 0.95rem; }
+.lh-table tr:hover td { background-color: var(--brand-surface); cursor: pointer; }
+
+
+
+/* --- RESPONSIVE HYBRID TABLE --- */
+
+@media screen and (max-width: 768px) {
+  /* 1. Force the table elements to act like block elements (divs) */
+  .lh-table, .lh-table thead, .lh-table tbody, .lh-table th, .lh-table td, .lh-table tr { 
+    display: block; 
+  }
+
+  /* 2. Hide the table headers (but keep them accessible to screen readers) */
+  .lh-table thead tr { 
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  /* 3. Style the ROW as a CARD */
+  .lh-table tr { 
+    background: white;
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+    margin-bottom: 1rem; 
+    padding: 1rem;
+    box-shadow: var(--shadow-1);
+    position: relative;
+  }
+  
+  /* Add a little indicator strip on the left of the card */
+  .lh-table tr::after {
+    content: '';
+    position: absolute;
+    top: 12px; bottom: 12px; left: 0;
+    width: 4px;
+    background: var(--brand-soft);
+    border-radius: 0 4px 4px 0;
+  }
+
+  /* 4. Style the CELL as a Key-Value pair */
+  .lh-table td { 
+    /* Behave like a row */
+    border: none;
+    border-bottom: 1px solid #f0f0f0; 
+    position: relative;
+    padding-left: 50%; /* Make space for the label */
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: right; /* Value goes to the right */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .lh-table td:last-child {
+    border-bottom: none;
+  }
+
+  /* 5. Inject the Label using the 'data-label' attribute */
+  .lh-table td::before { 
+    content: attr(data-label); /* Pulls text from the HTML */
+    position: absolute;
+    left: 10px;
+    width: 45%; 
+    padding-right: 10px; 
+    white-space: nowrap;
+    text-align: left;
+    font-weight: 700;
+    color: var(--text-light);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+}
+
+
+/* --- FILTER BAR COMPONENTS --- */
+
+.lh-filter-bar {
+  display: flex;
+  flex-wrap: wrap; /* Allows items to drop to next line if needed */
+  gap: 1rem;
+  align-items: center;
+  padding: 1rem;
+}
+
+.lh-select {
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: 1px solid var(--glass-border);
+  background: var(--brand-surface); /* The Pale Pink */
+  color: var(--brand-deep);
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.2s ease;
+  min-width: 180px; /* Prevent them from getting too squashed */
+}
+
+.lh-select:hover {
+  border-color: var(--brand-soft);
+  box-shadow: 0 2px 8px rgba(154, 42, 42, 0.1);
+}
+
+.lh-select:focus {
+  border-color: var(--brand-primary);
+  background: white;
+}
+
+/* --- RESPONSIVE FILTERS (Mobile) --- */
+@media screen and (max-width: 768px) {
+  .lh-filter-bar {
+    flex-direction: column; /* Stack vertically */
+    align-items: stretch; /* Stretch to full width */
+  }
+  
+  .lh-select {
+    width: 100%; /* Full width buttons for thumbs */
+    padding: 12px; /* Larger touch target */
+  }
+  
+  /* Hide the "FILTER BY" label on mobile to save space */
+  .lh-filter-label {
+    display: none; 
+  }
+}
+
+
+/* --- ACCORDION / DETAIL ROW STYLES --- */
+
+/* Desktop: The row that appears inside the table */
+.lh-detail-row td {
+  background-color: #fcfcfc; /* Slightly off-white to distinguish */
+  padding: 2rem !important;
+  box-shadow: inset 0 3px 6px rgba(0,0,0,0.05); /* Inner shadow for depth */
+  border-bottom: 2px solid var(--brand-soft);
+}
+
+/* The grid container for the smart narrative fields */
+.lh-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+/* --- MOBILE TWEAKS FOR DETAIL ROW --- */
+@media screen and (max-width: 768px) {
+  
+  /* When a row is active/open on mobile, remove bottom curves */
+  .lh-table tr.lh-row-active {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom: none; /* Merge with detail */
+    margin-bottom: 0;
+    background: var(--brand-surface); /* Highlight the active header */
+  }
+
+  /* The detail row itself on mobile */
+  .lh-table tr.lh-detail-row {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-top: none;
+    margin-top: 0; /* Pull it up to touch the parent */
+    background: white;
+    box-shadow: 0 4px 4px rgba(0,0,0,0.05); /* Shadow only at bottom */
+  }
+
+  /* Reset the cell styling for the detail container on mobile */
+  .lh-table tr.lh-detail-row td {
+    display: block;
+    padding: 1.5rem !important;
+    text-align: left;
+  }
+  
+  /* Remove the pseudo-labels (data-label) for the detail row content */
+  .lh-table tr.lh-detail-row td::before {
+    content: none;
+  }
+}
+
+/* EDIT DRAWER */
+.lh-drawer-overlay {
+  position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(0,0,0,0.3); backdrop-filter: blur(2px);
+  z-index: 1000; display: flex; justify-content: flex-end;
+}
+.lh-drawer {
+  width: 400px; max-width: 90%; height: 100%; background: white;
+  box-shadow: -5px 0 25px rgba(0,0,0,0.15); padding: 2rem;
+  display: flex; flex-direction: column; animation: slideIn 0.3s forwards;
+}
+.lh-input { width: 100%; padding: 10px; margin-bottom: 1rem; border: 1px solid #ddd; border-radius: 8px; }
+@keyframes slideIn { from { transform: translateX(100%); } to { transform: translateX(0); } }

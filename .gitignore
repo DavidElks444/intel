@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.env
+
+# React
+node_modules/
+build/
+.DS_Store
+
+# Data (We usually don't commit real data, but for this prototype we might commit lookups)
+server/data/archive/
+server/data/pending/
+# Keep the master CSVs for now, but ignore temp files

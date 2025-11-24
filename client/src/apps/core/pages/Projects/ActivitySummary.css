@@ -1,0 +1,174 @@
+.summary-container {
+  padding: 1.5rem;
+  max-width: 1200px; 
+  margin: 0 auto;
+}
+
+.summary-container h3 {
+  margin-top: 2.5rem;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 8px;
+  color: #333;
+}
+/* --- Narrative Box */
+.narrative-box {
+  background-color: #9A2A2A; 
+  color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+.narrative-box strong {
+  color: #f0f0f0; 
+  font-weight: 600;
+}
+
+.narrative-box ul {
+  margin-top: 1rem;
+  padding-left: 20px;
+}
+
+.chart-container {
+  width: 100%;
+  max-width: 900px; /* Stop it from getting too wide */
+  margin-top: 1rem;
+}
+
+/* --- Grid for laying out KPI cards --- */
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+/* --- Base styles for all KPI cards --- */
+.kpi-card {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+.kpi-card h4 {
+  margin-top: 0;
+  margin-bottom: 1.2rem;
+  color: #555;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/* --- 1. Styles for "Top 3" lists --- */
+.kpi-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.kpi-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #f5f5f5;
+}
+.kpi-list li:last-child {
+  border-bottom: none;
+}
+.kpi-list strong {
+  color: #333;
+}
+.kpi-count {
+  font-weight: 600;
+  color: #111;
+  font-size: 1.1rem;
+}
+
+/* --- 2. Styles for "Breakdown" tables --- */
+.kpi-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.kpi-table td {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #f5f5f5;
+}
+.kpi-table tr:last-child td {
+  border-bottom: none;
+}
+.kpi-table td:last-child {
+  text-align: right;
+  font-weight: 600;
+  color: #333;
+}
+.kpi-total td {
+  font-weight: bold;
+  color: #000;
+  border-top: 2px solid #e0e0e0;
+}
+
+/* --- 3. Styles for "Actionable" stats --- */
+.kpi-stat .kpi-stat-value {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #9A2A2A; /* Use your theme color */
+  line-height: 1.1;
+}
+.kpi-stat .kpi-stat-label {
+  font-size: 1.1rem;
+  color: #333;
+  margin-top: 0.25rem;
+}
+
+/* --- Chart Container --- */
+.chart-container {
+  width: 100%;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #f0f0f0;
+}
+
+/* --- Help Request Form --- */
+.help-form {
+  margin-top: 3rem;
+  padding: 1.5rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background: #fafafa;
+}
+
+.help-form.success {
+  background: #f0fff4;
+  border-color: #b7ebc9;
+}
+.help-form.success h4 {
+  color: #046c2e;
+  margin-top: 0;
+}
+
+.help-form h3 {
+  margin-top: 0;
+  border-bottom: none;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.form-group input[type="text"],
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  box-sizing: border-box; /* Important for 100% width */
+}
