@@ -1,19 +1,19 @@
-// intel/client/src/App.jsx
-
-import React, { Suspense, lazy } from 'react';
+import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 
-// Lazy load the specific component you want to test
-const LoginGate = lazy(() => import('./apps/lighthouse/Login.jsx'));
+// 1. We ONLY import the necessary components from the working path.
+// The file is Login.js, NOT Login.jsx
+import AppLighthouse from './apps/lighthouse/AppLighthouse'; 
+import Login from './apps/lighthouse/Login'; 
 
 function App() {
+  // This structure requires the Context (BrowserRouter) to exist higher up
   return (
-    <Suspense fallback={<div>Loading Application...</div>}>
-      <Routes>
-        {/* Set the LoginGate as the catch-all component */}
-        <Route path="*" element={<LoginGate />} /> 
-      </Routes>
-    </Suspense>
+    <Routes>
+      <Route path="/login" element={<Login />} />
+      {/* Catch-all for the main app experience */}
+      <Route path="/*" element={<AppLighthouse />} />
+    </Routes>
   );
 }
 
